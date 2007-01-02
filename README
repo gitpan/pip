@@ -1,0 +1,132 @@
+NAME
+    pip - Console application for running Perl 5 Installer (P5I) files
+
+DESCRIPTION
+    WARNING: THIS APPLICATION IS CONSIDERED EXPERIMENTAL. FEATURES MAY BE
+    BROKEN OR SUBJECT TO CHANGE. YOU HAVE BEEN WARNED!
+
+    A Perl 5 Installer (P5I) file is a small script-like file that describes
+    a set of distributions to install, and integrates the installation of
+    these distributions with the CPAN installer.
+
+    The pip ("Perl Installation Program") command is used to install the
+    distributions described by the p5i script.
+
+    The primary use of P5I files are for installing proprietary or non-CPAN
+    software that may still require the installation of a number of
+    distributions in order.
+
+    It can also be used to ensure specific versions of CPAN modules are
+    installed instead of the most current version.
+
+    P5I files are also extensible, with the first line of the file
+    specifying the name of the Perl class that implements the plan.
+
+    For the moment, the class described at the top of the P5I file must be
+    installed.
+
+    The simple Module::Plan::Lite plan class is bundled with the main
+    distribution, and additional types can be installed if needed.
+
+USAGE
+    The pip command is used to install a P5I file and in the canonical case
+    is used as follows
+
+      pip directory/myplan.p5i
+
+    This command will load the plan file directory/myplan.p5i, create the
+    plan, and then execute it.
+
+    If only a directory name is given, pip will look for a default.p5i plan
+    in the directory. Thus, all of the following are equivalent
+
+      pip directory
+      pip directory/
+      pip directory/default.p5i
+
+    If no target is provided at all, then the current directory will be
+    used. Thus, the following are equivalent
+
+      pip
+      pip .
+      pip default.p5i
+      pip ./default.p5i
+
+  Syntax of a plan file
+    Initially, the only plan is available is the Module::Plan::Lite (MPL)
+    plan.
+
+    A typical MPL plan will look like the following
+
+      # myplan.p5i
+      Module::Plan::Lite
+  
+      Process-0.17.tar.gz
+      YAML-Tiny-0.10.tar.gz
+
+  Direct installation of a single file with -i or --install
+    With the functionality available in pip, you can find that sometimes you
+    don't even want to make a file at all, you just want to install a single
+    tarball.
+
+    The "-i" option lets you pass the name of a single file and it will
+    treat it as an installer for that single file. For example, the
+    following are equivalent.
+
+      # Installing with the -i|--install option
+      > ppi -i Process-0.17.tar.gz
+      > ppi --install Process-0.17.tar.gz
+  
+      # Installing from the file as normal
+      > pip ./default.p5i
+  
+      # myplan.p5i
+      Module::Plan::Lite
+  
+      Process-0.17.tar.gz
+
+    The "-i" option can be used with any single value supported by
+    Module::Plan::Lite (see above).
+
+SUPPORT
+    This module is stored in an Open Repository at the following address.
+
+    <http://svn.phase-n.com/svn/cpan/trunk/Module-Plan-Base>
+
+    Write access to the repository is made available automatically to any
+    published CPAN author, and to most other volunteers on request.
+
+    If you are able to submit your bug report in the form of new (failing)
+    unit tests, or can apply your fix directly instead of submitting a
+    patch, you are strongly encouraged to do so. The author currently
+    maintains over 100 modules and it may take some time to deal with
+    non-Critical bug reports or patches.
+
+    This will guarentee that your issue will be addressed in the next
+    release of the module.
+
+    If you cannot provide a direct test or fix, or don't have time to do so,
+    then regular bug reports are still accepted and appreciated via the CPAN
+    bug tracker.
+
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Module-Plan-Base>
+
+    For other issues, for commercial enhancement and support, or to have
+    your write access enabled for the repository, contact the author at the
+    email address above.
+
+AUTHORS
+    Adam Kennedy <adamk@cpan.org>
+
+SEE ALSO
+    Module::Plan::Base, Module::Plan::Lite, Module::Plan
+
+COPYRIGHT
+    Copyright 2006 Adam Kennedy.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+    The full text of the license can be found in the LICENSE file included
+    with this module.
+

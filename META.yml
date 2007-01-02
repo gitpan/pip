@@ -1,0 +1,26 @@
+abstract: Console application for running Perl 5 Installer (P5I) files
+author: Adam Kennedy <adamk@cpan.org>
+build_requires: 
+  LWP::Online: 0.01
+  Test::More: 0.42
+  Test::Script: 1.02
+distribution_type: module
+generated_by: Module::Install version 0.64
+license: perl
+name: pip
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  CPAN: 1.76
+  CPAN::Inject: 0.01
+  Carp: 0
+  File::Basename: 0
+  File::Spec: 0.80
+  File::Which: 0.05
+  Getopt::Long: 0
+  LWP::Simple: 0
+  Params::Util: 0.10
+  URI: 0
+version: 0.06
