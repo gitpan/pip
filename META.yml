@@ -1,7 +1,7 @@
 abstract: Console application for running Perl 5 Installer (P5I) files
 author: Adam Kennedy <adamk@cpan.org>
 build_requires: 
-  LWP::Online: 0.01
+  LWP::Online: 0.02
   Test::More: 0.42
   Test::Script: 1.02
 distribution_type: module
@@ -18,9 +18,11 @@ requires:
   Carp: 0
   File::Basename: 0
   File::Spec: 0.80
+  File::Temp: 0.15
   File::Which: 0.05
   Getopt::Long: 0
   LWP::Simple: 0
   Params::Util: 0.10
   URI: 0
-version: 0.06
+  perl: 5.005
+version: 0.08

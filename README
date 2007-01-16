@@ -2,9 +2,6 @@ NAME
     pip - Console application for running Perl 5 Installer (P5I) files
 
 DESCRIPTION
-    WARNING: THIS APPLICATION IS CONSIDERED EXPERIMENTAL. FEATURES MAY BE
-    BROKEN OR SUBJECT TO CHANGE. YOU HAVE BEEN WARNED!
-
     A Perl 5 Installer (P5I) file is a small script-like file that describes
     a set of distributions to install, and integrates the installation of
     these distributions with the CPAN installer.
@@ -91,7 +88,7 @@ USAGE
 SUPPORT
     This module is stored in an Open Repository at the following address.
 
-    <http://svn.phase-n.com/svn/cpan/trunk/Module-Plan-Base>
+    <http://svn.phase-n.com/svn/cpan/trunk/pip>
 
     Write access to the repository is made available automatically to any
     published CPAN author, and to most other volunteers on request.
@@ -109,7 +106,7 @@ SUPPORT
     then regular bug reports are still accepted and appreciated via the CPAN
     bug tracker.
 
-    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Module-Plan-Base>
+    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=pip>
 
     For other issues, for commercial enhancement and support, or to have
     your write access enabled for the repository, contact the author at the
@@ -122,7 +119,7 @@ SEE ALSO
     Module::Plan::Base, Module::Plan::Lite, Module::Plan
 
 COPYRIGHT
-    Copyright 2006 Adam Kennedy.
+    Copyright 2006 - 2007 Adam Kennedy.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
