@@ -4,7 +4,7 @@ package Module::Plan::Lite;
 
 =head1 NAME
 
-Module::Script::Lite - Lite installation scripts for third-party modules
+Module::Plan::Lite - Lite installation scripts for third-party modules
 
 =head1 SYNOPSIS
 
@@ -22,7 +22,7 @@ The following is the contents of your default.pip file.
 use strict;
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.08';
+	$VERSION = '0.10';
 }
 
 use base 'Module::Plan::Base';
@@ -86,6 +86,8 @@ sub run {
 		$self->_cpan_inject( $name );
 		$self->_cpan_install( $name );
 	}
+
+	return 1;
 }
 
 1;

@@ -1,4 +1,3 @@
-bin/pip
 Changes
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
@@ -9,6 +8,8 @@ inc/Module/Install/Metadata.pm
 inc/Module/Install/Scripts.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
+lib/Module/P5Z.pm
+lib/Module/Plan/Archive.pm
 lib/Module/Plan/Base.pm
 lib/Module/Plan/Lite.pm
 lib/pip.pm
@@ -17,6 +18,7 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+script/pip
 t/01_compile.t
 t/02_main.t
 t/03_uri.t
