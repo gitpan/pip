@@ -1,5 +1,6 @@
 NAME
-    pip - Console application for running Perl 5 Installer (P5I) files
+    pip - The Perl Installation Program, for scripted and third-party
+    distribution installation.
 
 DESCRIPTION
     The pip ("Perl Installation Program") console application is used to

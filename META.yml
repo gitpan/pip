@@ -1,5 +1,5 @@
 --- 
-abstract: Console application for running Perl 5 Installer (P5I) files
+abstract: The Perl Installation Program, for scripted and third-party
 author: Adam Kennedy <adamk@cpan.org>
 build_requires: 
   LWP::Online: 0.02
@@ -32,4 +32,4 @@ requires:
   Params::Util: 0.21s
   URI: 0
   perl: 5.005
-version: 0.10
+version: 0.11
