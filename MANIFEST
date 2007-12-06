@@ -22,7 +22,8 @@ script/pip
 t/01_compile.t
 t/02_main.t
 t/03_uri.t
-t/99_author.t
+t/98_pod.t
+t/99_pmv.t
 t/data/03_uri.p5i
 t/data/default.p5i
 t/data/Process-0.17.tar.gz

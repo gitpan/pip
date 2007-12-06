@@ -1,12 +1,13 @@
 --- 
 abstract: The Perl Installation Program, for scripted and third-party
-author: Adam Kennedy <adamk@cpan.org>
+author: 
+  - Adam Kennedy <adamk@cpan.org>
 build_requires: 
   LWP::Online: 0.02
   Test::More: 0.42
   Test::Script: 1.02
 distribution_type: module
-generated_by: Module::Install version 0.65
+generated_by: Module::Install version 0.68
 license: perl
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -29,7 +30,7 @@ requires:
   Getopt::Long: 0
   IO::Zlib: 0
   LWP::Simple: 0
-  Params::Util: 0.21s
+  Params::Util: 0.21
   URI: 0
   perl: 5.005
-version: 0.12
+version: 0.13
