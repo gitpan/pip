@@ -1,4 +1,16 @@
-Revision history for Perl extension Module::Plan::Base
+Revision history for Perl extension pip
+
+1.16 Mon 23 Nov 2009
+	- Adding support for zip files
+
+1.15 Thu 27 Aug 2009
+	- Upgrading Module::Install to 0.91
+	- Updating to a production version
+
+0.14 Fri  5 Oct 2007
+	- Dropping the File::Temp dependency on non-Windows to 0.14
+	  (allows easier installation on RedHat Enterprise Linux 4, and other perl 5.8.5 platforms)
+	- Adding initial PAR support
 
 0.13 Thu  6 Dec 2007
 	- No functional changes, no need to upgrade

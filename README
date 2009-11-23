@@ -75,8 +75,8 @@ USAGE
 
       # myplan.p5i
       Module::Plan::Lite
-  
-      Process-0.17.tar.gz
+      
+  Process-0.17.tar.gz
       YAML-Tiny-0.10.tar.gz
 
   Direct installation of a single tarball
@@ -94,14 +94,14 @@ USAGE
       > pip Process-0.17.tar.gz
       > pip -i Process-0.17.tar.gz
       > pip --install Process-0.17.tar.gz
-  
-      # Installing from the file as normal
+      
+  # Installing from the file as normal
       > pip ./default.p5i
-  
-      # myplan.p5i
+      
+  # myplan.p5i
       Module::Plan::Lite
-  
-      Process-0.17.tar.gz
+      
+  Process-0.17.tar.gz
 
     The "-i" option can be used with any single value supported by
     Module::Plan::Lite (see above).
@@ -145,7 +145,7 @@ SEE ALSO
     Module::Plan::Base, Module::Plan::Lite, Module::Plan
 
 COPYRIGHT
-    Copyright 2006 - 2007 Adam Kennedy.
+    Copyright 2006 - 2009 Adam Kennedy.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

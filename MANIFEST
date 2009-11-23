@@ -16,12 +16,14 @@ lib/pip.pm
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
+MANIFEST.SKIP
 META.yml
 README
 script/pip
 t/01_compile.t
 t/02_main.t
 t/03_uri.t
+t/97_meta.t
 t/98_pod.t
 t/99_pmv.t
 t/data/03_uri.p5i
