@@ -1,6 +1,6 @@
 package pip;
 
-use 5.00503;
+use 5.006;
 use strict;
 use File::Spec         ();
 use File::Temp         ();
@@ -11,7 +11,7 @@ use Module::Plan::Base ();
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '1.16';
+	$VERSION = '1.17';
 }
 
 
@@ -33,8 +33,13 @@ sub main {
 	}
 
 	# If the first argument is a file, install it
-	if ( $ARGV[0] =~ /^https?\:\/\// ) {
-		return fetch_any($ARGV[0]);
+	if ( $ARGV[0] =~ /^(https?|ftp)\:\/\// ) {
+		# resolving redirects to get the real URI, handy for handling
+		# e.g. github URLs like http://github.com/john/repo-name/tarball/master
+		require LWP::Simple;
+		my $h = LWP::Simple::head($ARGV[0]);
+		error("Probably non existing URI '$ARGV[0]'") unless defined($h);
+		return fetch_any($h->request->uri || $ARGV[0]);
 	}
 	if ( -f $ARGV[0] ) {
 		return install_any($ARGV[0]);
@@ -90,7 +95,7 @@ sub read_any {
 	my $param = $_[0];
 
 	# If the first argument is a tar.gz file, hand off to install
-	if ( $param =~ /\.(?:zip|tar\.gz)$/ ) {
+	if ( $param =~ /\.(?:zip|tar\.gz|tgz)$/ ) {
 		return read_archive(@_);
 	}
 
@@ -114,9 +119,7 @@ sub read_any {
 
 # Create the plan object from a file
 sub read_p5i {
-	my $pip = @_
-		? shift
-		: File::Spec->curdir;
+	my $pip = @_ ? shift : File::Spec->curdir;
 	if ( -d $pip ) {
 		$pip = File::Spec->catfile( $pip, 'default.p5i' );
 	}
@@ -138,7 +141,7 @@ sub read_p5i {
 		# Generate an appropriate error
 		my @msg = (
 			"The current user does not control the default CPAN client",
-			);
+		);
 		if ( File::Which::which('sudo') ) {
 			my $cmd = join(' ', 'sudo', '-H', $0, @_);
 			push @msg, "You may need to try again with the following command:";
@@ -160,7 +163,7 @@ sub read_archive {
 	Module::Plan::Lite->new(
 		p5i   => 'default.p5i',
 		lines => [ '', URI::file->new($archive)->as_string ],
-		);
+	);
 }
 
 sub read_p5z {
@@ -211,6 +214,16 @@ sub error {
 
 pip - The Perl Installation Program, for scripted and third-party
 distribution installation.
+
+=head1 SYNOPSIS
+
+  pip script.p5i
+  pip script.p5z
+  pip Distribution-1.23.tgz
+  pip Distribution-1.23.tar.gz
+  pip Distribution-1.23-MSWin32-5.8.0.par
+  pip http://server/Distribution-1.23.tar.gz
+  pip http://github.com/gitpan/Distribution/tarball/1.23
 
 =head1 DESCRIPTION
 
@@ -364,7 +377,7 @@ L<Module::Plan::Base>, L<Module::Plan::Lite>, L<Module::Plan>
 
 =head1 COPYRIGHT
 
-Copyright 2006 - 2009 Adam Kennedy.
+Copyright 2006 - 2010 Adam Kennedy.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.

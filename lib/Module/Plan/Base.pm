@@ -22,7 +22,7 @@ See L<pip> for the front-end console application for this module.
 
 =cut
 
-use 5.005;
+use 5.006;
 use strict;
 use Carp           'croak';
 use File::Spec     ();
@@ -53,7 +53,7 @@ use CPAN;
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '1.16';
+	$VERSION = '1.17';
 }
 
 
@@ -388,7 +388,7 @@ L<pip>, L<Module::Plan>, L<Module::Inspector>
 
 =head1 COPYRIGHT
 
-Copyright 2006 - 2009 Adam Kennedy.
+Copyright 2006 - 2010 Adam Kennedy.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.

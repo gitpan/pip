@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 
-use 5.00503;
+use 5.006;
 use strict;
 use pip;
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '1.16';
+	$VERSION = '1.17';
 }
 
 eval {

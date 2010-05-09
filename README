@@ -2,6 +2,15 @@ NAME
     pip - The Perl Installation Program, for scripted and third-party
     distribution installation.
 
+SYNOPSIS
+      pip script.p5i
+      pip script.p5z
+      pip Distribution-1.23.tgz
+      pip Distribution-1.23.tar.gz
+      pip Distribution-1.23-MSWin32-5.8.0.par
+      pip http://server/Distribution-1.23.tar.gz
+      pip http://github.com/gitpan/Distribution/tarball/1.23
+
 DESCRIPTION
     The pip ("Perl Installation Program") console application is used to
     install Perl distributions in a wide variety of formats, both from CPAN
@@ -145,7 +154,7 @@ SEE ALSO
     Module::Plan::Base, Module::Plan::Lite, Module::Plan
 
 COPYRIGHT
-    Copyright 2006 - 2009 Adam Kennedy.
+    Copyright 2006 - 2010 Adam Kennedy.
 
     This program is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

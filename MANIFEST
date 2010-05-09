@@ -7,6 +7,7 @@ inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
 inc/Module/Install/Scripts.pm
 inc/Module/Install/Win32.pm
+inc/Module/Install/With.pm
 inc/Module/Install/WriteAll.pm
 lib/Module/P5Z.pm
 lib/Module/Plan/Archive.pm
@@ -23,11 +24,11 @@ script/pip
 t/01_compile.t
 t/02_main.t
 t/03_uri.t
-t/97_meta.t
-t/98_pod.t
-t/99_pmv.t
 t/data/03_uri.p5i
 t/data/default.p5i
-t/data/Process-0.17.tar.gz
+t/data/Process-0.17.tgz
 t/data/YAML-Tiny-0.10.tar.gz
 t/lib/Test.pm
+xt/meta.t
+xt/pmv.t
+xt/pod.t
