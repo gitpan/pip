@@ -94,7 +94,7 @@ USAGE
     tarball.
 
     The "-i" option lets you pass the name of a single file and it will
-    treat it as an installer for that single file. Further, if the extention
+    treat it as an installer for that single file. Further, if the extension
     of the tarball is .tar.gz, the -i option is implied.
 
     For example, the following are equivalent.
